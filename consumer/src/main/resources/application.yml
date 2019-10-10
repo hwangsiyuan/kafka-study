@@ -1,0 +1,14 @@
+spring:
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    consumer:
+      group-id: test001
+      enable-auto-commit: true
+      auto-commit-interval: 15000ms
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      fetch-max-wait: 30000ms
+logging:
+  level.com.hussein: debug
+server:
+  port: 8090
