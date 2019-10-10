@@ -13,4 +13,6 @@ public interface ProducerService {
     void sendMsg(String msg);
 
     void sendMsgWithTrans(String msg);
+
+    void batchSendMsg(String msg);
 }

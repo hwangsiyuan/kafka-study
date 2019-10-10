@@ -30,4 +30,10 @@ public class ProducerController {
         producerService.sendMsgWithTrans(msg);
         return "hello world";
     }
+
+    @GetMapping("/batchSendMsg")
+    public String batchSendMsg(String msg) {
+        producerService.batchSendMsg(msg);
+        return "hello world";
+    }
 }

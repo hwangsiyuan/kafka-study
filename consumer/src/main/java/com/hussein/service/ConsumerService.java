@@ -1,6 +1,9 @@
 package com.hussein.service;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.springframework.kafka.support.Acknowledgment;
+
+import java.util.List;
 
 /**
  * <p>Title: ConsumerService</p>
@@ -13,4 +16,6 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 public interface ConsumerService {
 
     void consumeMsg(ConsumerRecord<String, String> record);
+
+    void consumeMsgBatch(List<ConsumerRecord<String, String>> recordList, Acknowledgment ack);
 }
